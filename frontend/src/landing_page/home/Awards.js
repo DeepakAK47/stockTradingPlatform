@@ -23,7 +23,7 @@ function Awards () {
                                     <li>Bonds and Gov...</li>
                     </div>
                     </div>
-                    <img src="media/Images/pressLogos.png" style={{width:"90%"}} />
+                    {/* <img src="media/Images/pressLogos.png" style={{width:"90%"}} /> */}
                 </div>
             </div>
         </div>

@@ -24,8 +24,8 @@ root.render(
   <Route path="/signup" element={<SignupPage/>}/>
    <Route path="/support" element={<SupportPage/>}/>
    <Route path ="*" element={<NotFound/>}/>
-</Routes>
- <Footer/>
-</BrowserRouter>
+   </Routes>
+   <Footer/>
+   </BrowserRouter>
 );
 

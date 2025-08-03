@@ -20,3 +20,12 @@ margin-left : 40px;
   background-color : rgb(56,126,209);
   color : white;
 }
+
+.custom-link:hover{
+color : #0d6efd !important;
+text-decoration : none;
+}
+.navlogo{
+  margin-left : 5rem;
+  /* Height : 60px; */
+}
