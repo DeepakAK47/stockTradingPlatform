@@ -2,20 +2,24 @@ import React from 'react';
 
 function StepOfOpenAccount() {
     return ( 
-        <div className="bg-info" >
+        <div className="bg-light" style={{height:"450px"}} >
         <div className="container" >
             <div className="row">
-                <h1 className="text-center mb-5">Steps to open a demat account with Zerodha</h1>
-            <div className="col-6">
+                <h3 className="text-center mt-5 mb-5 text-muted">Steps to open a demat account with Zerodha</h3>
+                <div className="col-2"></div>
+            <div className="col-4">
                 <img src="media/Images/5.svg" className="mt-5 mx-3"/>
             </div>
-             <div className="col-6 p-5 mt-5">
+             <div className="col-4 p-5 mt-5 text-muted">
                 <ol>
-                    <h1>1.Enter the requested details</h1>
-                    <h1>Complete e-sign & verification</h1>
-                    <h1>Start investing!</h1>
+                    <h4>1.Enter the requested details</h4>
+                    <hr></hr>
+                    <h4>2.Complete e-sign & verification</h4>
+                    <hr></hr>
+                    <h4>3.Start investing!</h4>
                 </ol>
              </div>
+             <div className="col-2"></div>
             </div>
         </div>
         </div>

@@ -22,7 +22,7 @@ function Stats() {
                           <a href=" " style={{textDecoration:"none"}}>Kite demo <i class="fa-solid fa-arrow-right-long"></i></a>
                     </div>
                 </div>
-                 <img src="media/Images/pressLogos.png" className="text-center" style={{width:"60%"}} />
+                 <img src="media/Images/pressLogos.png" className="text-center mx-auto" style={{width:"60%"}} />
             </div>
         </div>
      );

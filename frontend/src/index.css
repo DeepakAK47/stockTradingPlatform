@@ -29,3 +29,7 @@ text-decoration : none;
   margin-left : 5rem;
   /* Height : 60px; */
 }
+.responsive-image1{
+  width : 140%;
+  height : 90%;
+}
