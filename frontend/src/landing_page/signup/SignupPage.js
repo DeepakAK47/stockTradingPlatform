@@ -6,6 +6,7 @@ import QuestionAndAnswer from "./QuestionAndAnswer";
 import SignUpNow from "./SignUpNow";
 import StepOfOpenAccount from "./StepOfOpenAccount";
 import BenefitSection from "./BenefitSection.js";
+import OpenAccount from "../OpenAccount";
 
 function SignupPage() {
   return (
@@ -17,6 +18,7 @@ function SignupPage() {
       <BenefitSection/>
       <ExploreDifferentAccount />
       <QuestionAndAnswer />
+      <OpenAccount/>
     </>
   );
 }

@@ -2,10 +2,10 @@ import React from "react";
 
 function OpenAccount() {
   return (
-    <div className="container">
+    <div className="container ">
       <div className="row text-muted">
-        <h5 className="text-muted mb-3 ">Open a Zerodha account</h5>
-        <p className="mb-5 text-muted mb-3 mt-3">
+        <h5 className="text-muted mb-3 text-center mt-5 ">Open a Zerodha account</h5>
+        <p className=" text-muted mb-3 mt-3 text-center">
           Modern platforms and apps, ₹0 investments, and flat ₹20 intraday and
           F&O trades.
         </p>

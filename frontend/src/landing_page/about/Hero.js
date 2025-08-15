@@ -5,15 +5,16 @@ function Hero() {
     <div className="container">
       <div className="row">
         <div className="column">
-          <h1 className="mt-5 mb-5 p-5 fs-2 text-center">
+          <h4 className="mt-5 mb-5 p-5  text-center text-muted">
             We pioneered the discount broking model in India.
             <br />
             Now, we are breaking ground with our technology.
-          </h1>
+          </h4>
           <hr />
         </div>
+        <div className="col-1"></div>
         <div
-          className="col-6 mt-5 p-5 mb-5  text-muted fs-6"
+          className="col-5 mt-5 p-5 mb-5  text-muted fs-6"
           style={{ lineHeight: "1.8", fontsize: "1.2em" }}
         >
           <p>
@@ -34,8 +35,9 @@ function Hero() {
             trading volumes.
           </p>
         </div>
+        
         <div
-          className="col-6 mt-5 p-5 mb-5 fs-6 text-muted"
+          className="col-5 mt-5 p-5 mb-5 fs-6 text-muted"
           style={{ lineHeight: "1.8", fontsize: "1.2em" }}
         >
           <p>

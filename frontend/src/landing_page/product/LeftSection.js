@@ -12,12 +12,14 @@ function LeftSection({
   return (
     <div className="container">
       <div className="row">
-        <div className="col-6 mt-3">
+        <div className="col-1"></div>
+        <div className="col-5 mt-3">
           <img src={imageURL} />
         </div>
-        <div className="col-6 p-2">
-          <h1>{productName}</h1>
-          <p>{productDesription}</p>
+        <div className="col-1"></div>
+        <div className="col-5 p-2">
+          <h3 className="text-muted">{productName}</h3>
+          <p className="text-muted">{productDesription}</p>
           <div className="p-3">
             <a href={tryDemo} style={{ textDecoration: "none" }}>
               TryDemo <i class="fa-solid fa-arrow-right-long"></i>

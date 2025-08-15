@@ -2,10 +2,10 @@ import React from "react";
 
 function Team() {
   return (
-    <div className="container">
-      <div className="row">
-        <h1 className=" fs-2 text-center mb-5">People</h1>
-        <div className="col-6 text-center">
+    <div className="containe mb-5">
+      <div className="row mb-5">
+        <div className="col-1"></div>
+        <div className="col-5 text-center">
           <img
             src="media/Images/nithinKamath.jpg"
             className="mb-3"
@@ -18,6 +18,7 @@ function Team() {
 
         <div className="col-6">
           <p>
+          <h3 className="text-muted mb-5">People</h3>
             Nithin bootstrapped and founded Zerodha in 2010 to overcome the
             <br></br> hurdles he faced during his decade long stint as a trader.
             Today,<br></br> Zerodha has changed the landscape of the Indian

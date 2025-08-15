@@ -1,8 +1,8 @@
 import React from "react";
 
 function ExploreDifferentAccount() {
-  return <div className="container">
-    <div className="row">
+  return <div className="container mb-5">
+    <div className="row mb-5">
       <h4 className="text-center mt-lg-5 mb-5 text-muted">Explore different account types</h4>
       <div className="col-1"></div>
       <div className="col-3">
