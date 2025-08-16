@@ -5,9 +5,10 @@ function Footer() {
     <footer style={{ backgroundColor: "rgb(250,250,250)" }} className="fs-6">
       <div className="container border-top mt-5 mb-3">
         <div className="row mt-5">
-          <div className="col">
+          <div className="col-1"></div>
+          <div className="col-3">
             <img src="media/Images/logo.svg" style={{ width: "50%" }} />
-            <p className="text-xs mb-3 mt-3 text-sm text-muted">
+            <p className="text-xs mb-3 mt-3 text-sm text-muted small">
               &copy;2010 - 2024, Not Zerodha Broking Ltd. All rights reserved.
             </p>
             <div>
@@ -24,71 +25,71 @@ function Footer() {
             </div>
           </div>
 
-          <div className="col">
-            <p className="text-muted">
+          <div className="col-2">
+            <p className="text-muted small">
               <b>Company</b>
             </p>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""  className="small" style={{ textDecoration: "none" }}>
               About
             </a>
             <br></br>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""  className="small" style={{ textDecoration: "none" }}>
               Products
             </a>
             <br></br>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""   className="small" style={{ textDecoration: "none" }}>
               Pricing
             </a>
             <br></br>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""  className="small" style={{ textDecoration: "none" }}>
               Referral Program
             </a>
             <br></br>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""  className="small" style={{ textDecoration: "none" }}>
               Careers
             </a>
             <br></br>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""  className="small" style={{ textDecoration: "none" }}>
               Zerodha.tech
             </a>
             <br></br>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""  className="small" style={{ textDecoration: "none" }}>
               Press & Media
             </a>
             <br></br>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""  className="small" style={{ textDecoration: "none" }}>
               Zerodha cares
             </a>
             <br></br>
           </div>
 
-          <div className="col">
-            <p className="text-muted">
+          <div className="col-2">
+            <p className="text-muted small">
               <b>Support</b>
             </p>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""  className="small" style={{ textDecoration: "none" }}>
               Contact
             </a>
             <br></br>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""  className="small" style={{ textDecoration: "none" }}>
               Support Portal
             </a>
             <br></br>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""  className="small" style={{ textDecoration: "none" }}>
               Z-Connect blog
             </a>
             <br></br>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""  className="small" style={{ textDecoration: "none" }}>
               List of charges
             </a>
             <br></br>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""  className="small" style={{ textDecoration: "none" }}>
               Downloads & resources
             </a>
             <br></br>
           </div>
 
-          <div className="col">
+          <div className="col-2 small">
             <p>
               <b>Account</b>
             </p>
@@ -96,22 +97,24 @@ function Footer() {
               Open an account
             </a>
             <br></br>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""  className="small" style={{ textDecoration: "none" }}>
               Fund transfer
             </a>
             <br></br>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href=""  className="small" style={{ textDecoration: "none" }}>
               60 day challenge
             </a>
             <br></br>
           </div>
         </div>
-
+        <div className="row">
+          <div className="col-1"></div>
+          <div className="col-10">
         <div
           className="mt-5 text-muted font-size:12px"
           style={{ fontSize: "14px" }}
         >
-          <p className="text-mute">
+          <p className="text-mute small">
             Zerodha Broking Ltd.: Member of NSE, BSE​ &​ MCX – SEBI Registration
             no.: INZ000031633 CDSL/NSDL: Depository services through Zerodha
             Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Commodity
@@ -131,7 +134,7 @@ function Footer() {
             . Please ensure you carefully read the Risk<br></br> Disclosure
             Document as prescribed by SEBI | ICF
           </p>
-          <p>
+          <p className="small">
             Procedure to file a complaint on{" "}
             <a href="" style={{ textDecoration: "none" }}>
               SEBI SCORES
@@ -141,20 +144,20 @@ function Footer() {
             Benefits: Effective Communication, Speedy<br></br> redressal of the
             grievances
           </p>
-          <a href="" style={{ textDecoration: "none" }}>
+          <a href="" className="small" style={{ textDecoration: "none" }}>
             Smart Online Dispute Resolution
           </a>{" "}
           |{" "}
-          <a href="" style={{ textDecoration: "none" }}>
+          <a href="" className="small"  style={{ textDecoration: "none" }}>
             Grievances Redressal Mechanism
           </a>
           <br></br>
           <br></br>
-          <p>
+          <p className="small" >
             Investments in securities market are subject to market risks; read
             all the related documents carefully before investing.
           </p>
-          <p>
+          <p className="small" >
             Attention investors: 1) Stock brokers can accept securities as
             margins from clients only by way of pledge in the depository system
             w.e.f September 01, 2020. 2) Update your e-mail and phone number
@@ -186,34 +189,36 @@ function Footer() {
           </p>
         </div>
         <div className="text-center">
-          <a href="" style={{ textDecoration: "none" }} className="me-3">
+          <a href="" style={{ textDecoration: "none" }} className="me-3 small">
             NSE
           </a>
-          <a href="" className="ml-3 me-3" style={{ textDecoration: "none" }}>
+          <a href="" className="ml-3 me-3 small" style={{ textDecoration: "none" }}>
             BSE
           </a>
-          <a href="" style={{ textDecoration: "none" }} className="me-3">
+          <a href="" style={{ textDecoration: "none" }} className="me-3 small">
             MCX
           </a>
-          <a href="" style={{ textDecoration: "none" }} className="me-3">
+          <a href="" style={{ textDecoration: "none" }} className="me-3 small ">
             Terms & conditions
           </a>
-          <a href="" style={{ textDecoration: "none" }} className="me-3">
+          <a href="" style={{ textDecoration: "none" }} className="me-3 small">
             Policies & procedures
           </a>
-          <a href="" style={{ textDecoration: "none" }} className="me-3">
+          <a href="" style={{ textDecoration: "none" }} className="me-3 small">
             Privacy & policy
           </a>
-          <a href="" style={{ textDecoration: "none" }} className="me-3">
+          <a href="" style={{ textDecoration: "none" }} className="me-3 small">
             Disclosure
           </a>
-          <a href="" style={{ textDecoration: "none" }} className="me-3">
+          <a href="" style={{ textDecoration: "none" }} className="me-3 small">
             For investor's attentions
           </a>
-          <a href="" style={{ textDecoration: "none" }} className="me-3">
+          <a href="" style={{ textDecoration: "none" }} className="me-3 small">
             Investor charter
           </a>
         </div>
+        </div>
+      </div>
       </div>
     </footer>
   );
