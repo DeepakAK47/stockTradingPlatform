@@ -1,6 +1,12 @@
-import React from "react";
+import React from "react"; 
+import {useNavigate} from "react-router-dom";  // Import the hook
 
 function Hero() {
+const navigate  = useNavigate();    // Initializing hook
+const  handleSignUpClick = () => {
+  navigate("/signup");   // redirect signup
+};
+
   return (
     <div className="container p-5">
       <div className="row text-center">
@@ -16,6 +22,7 @@ function Hero() {
           bonds, and more.
         </h5>
         <button
+        onClick={handleSignUpClick}
           className="p-2 btn btn-primary fs-5"
           style={{ width: "20%", margin: "0 auto" }}
         >

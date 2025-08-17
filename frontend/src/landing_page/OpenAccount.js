@@ -1,6 +1,15 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";  // Import the hook
+
 
 function OpenAccount() {
+const navigate  = useNavigate();    // Initializing hook
+const  handleSignUpClick = () => {
+  navigate("/signup");   // redirect signup
+  window.scrollTo(0,0);  // it is responsible scroll the page at the top if you are still in the signup page.
+};
+
+
   return (
     <div className="container ">
       <div className="row text-muted">
@@ -10,6 +19,7 @@ function OpenAccount() {
           F&O trades.
         </p>
         <button
+         onClick={handleSignUpClick}
           className="p-2 btn btn-primary fs-5 mb-5"
           style={{ width: "20%", margin: "0 auto" }}
         >

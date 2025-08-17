@@ -16,7 +16,7 @@ function Stats() {
             No gimmicks, spam, "gamification", or annoying push notifications.
             High quality apps that you use at your pace, the way you like.
             <br></br>
-            <a href="" style={{ textDecoration: "none" }}>
+            <a href="https://zerodha.com/media" style={{ textDecoration: "none" }}>
               Our philosophies
             </a>
           </p>
@@ -40,7 +40,12 @@ function Stats() {
           </p>
         </div>
         <div className="col-6 p-5">
+
+          <a href="/product" style={{display : "inline-block"}}>  
+
           <img src="media/images/ecosystem.png" style={{ width: "120%" }} />
+
+          </a>
           <div>
             <a href=" " className="mx-5 " style={{ textDecoration: "none" }}>
               Explore our product <i class="fa-solid fa-arrow-right-long"></i>

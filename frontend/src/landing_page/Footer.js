@@ -17,7 +17,7 @@ function Footer() {
               <i class="fa-brands fa-instagram me-3 fa-lg text-muted"></i>
               <i class="fa-brands fa-linkedin me-3 fa-lg text-muted"></i>
             </div>
-            <hr />
+            <hr/>
             <div>
               <i class="fa-brands fa-youtube me-3 fa-lg text-muted"></i>
               <i class="fa-brands fa-whatsapp me-3 fa-lg text-muted"></i>
