@@ -16,7 +16,7 @@ function Stats() {
             No gimmicks, spam, "gamification", or annoying push notifications.
             High quality apps that you use at your pace, the way you like.
             <br></br>
-            <a href="https://zerodha.com/media" style={{ textDecoration: "none" }}>
+            <a href="/philosophies" style={{ textDecoration: "none" }}>
               Our philosophies
             </a>
           </p>

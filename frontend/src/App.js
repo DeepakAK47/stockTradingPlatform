@@ -9,6 +9,7 @@ import Footer from './landing_page/Footer';
 import Navbar from './landing_page/Navbar';
 import NotFound from './landing_page/NotFound';
 import ScrollTop from './ScrollTop'; // Optional (for scroll reset)
+import PhilosophiesPage from './landing_page/philosophies/PholosophiesPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/product" element={<ProductPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/support" element={<SupportPage />} />
+        <Route path="/philosophies" element={<PhilosophiesPage/>}/>
 
 
         <Route path="*" element={<NotFound />} />
