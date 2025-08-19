@@ -1,6 +1,9 @@
-import React from "react";
+import React from "react"; 
+import {useNavigate} from "react-router-dom";
 
 function Stats() {
+const navigate = useNavigate();
+
   return (
     <div className="container p-5">
       <div className="row p-5">
@@ -41,13 +44,19 @@ function Stats() {
         </div>
         <div className="col-6 p-5">
 
+
+
+
           <a href="/product" style={{display : "inline-block"}}>  
 
           <img src="media/images/ecosystem.png" style={{ width: "120%" }} />
 
+
+
+
           </a>
           <div>
-            <a href=" " className="mx-5 " style={{ textDecoration: "none" }}>
+            <a href="/product " className="mx-5 " style={{ textDecoration: "none" }}>
               Explore our product <i class="fa-solid fa-arrow-right-long"></i>
             </a>
             <a href=" " style={{ textDecoration: "none" }}>
@@ -55,11 +64,20 @@ function Stats() {
             </a>
           </div>
         </div>
-        <img
+
+
+
+
+        <img 
           src="media/Images/pressLogos.png"
           className="text-center mx-auto"
-          style={{ width: "60%" }}
+          onClick={()=> navigate('/media')}
+          style={{ width: "60%", cursor : "pointer" }}
         />
+
+
+
+
       </div>
     </div>
   );

@@ -10,6 +10,7 @@ import Navbar from './landing_page/Navbar';
 import NotFound from './landing_page/NotFound';
 import ScrollTop from './ScrollTop'; // Optional (for scroll reset)
 import PhilosophiesPage from './landing_page/philosophies/PholosophiesPage';
+import MediaPage from './landing_page/media/MediaPage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/support" element={<SupportPage />} />
         <Route path="/philosophies" element={<PhilosophiesPage/>}/>
+        <Route path="/media" element={<MediaPage/>}/>
 
 
         <Route path="*" element={<NotFound />} />

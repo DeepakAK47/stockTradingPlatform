@@ -34,3 +34,4 @@ const  handleSignUpClick = () => {
 }
 
 export default Hero;
+   
