@@ -50,7 +50,7 @@ function SignUpNow() {
           </p>
         </div>
         <div className="col-0"></div>
-      </div>
+      </div>  
     </div>
   );
 }

@@ -43,17 +43,9 @@ const navigate = useNavigate();
           </p>
         </div>
         <div className="col-6 p-5">
-
-
-
-
           <a href="/product" style={{display : "inline-block"}}>  
 
           <img src="media/images/ecosystem.png" style={{ width: "120%" }} />
-
-
-
-
           </a>
           <div>
             <a href="/product " className="mx-5 " style={{ textDecoration: "none" }}>
@@ -64,20 +56,12 @@ const navigate = useNavigate();
             </a>
           </div>
         </div>
-
-
-
-
         <img 
           src="media/Images/pressLogos.png"
           className="text-center mx-auto"
           onClick={()=> navigate('/media')}
           style={{ width: "60%", cursor : "pointer" }}
         />
-
-
-
-
       </div>
     </div>
   );
