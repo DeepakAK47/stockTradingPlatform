@@ -219,3 +219,135 @@
     color: #fff;
   }
   
+
+  .topbarfont{
+    font-size : 0.7rem;
+    display : flex;
+    align-items : center;
+    gap : 8px;
+  }
+
+  .topbarAlignment{
+    display : flex;
+    justify-content : flex-end;
+    align-items:center;
+    padding: 2rem;
+    /* margin-left : auto; */
+  }
+
+
+  .market-overview {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  margin-bottom: 30px;
+}
+
+.market-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.market-header h2 {
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.index-selector {
+  display: flex;
+  gap: 10px;
+}
+
+.index-selector button {
+  background-color: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.index-selector button:hover {
+  background-color: #edf2f7;
+}
+
+.index-selector button.active {
+  background-color: #4361ee;
+  color: white;
+  border-color: #4361ee;
+}
+
+.market-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.index-value {
+  margin-bottom: 20px;
+}
+
+.index-value h3 {
+  color: #718096;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.index-value .price {
+  color: #2d3748;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.index-value .date {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.chart-container {
+  height: 300px;
+  width: 100%;
+}
+
+.custom-tooltip {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-tooltip .label {
+  color: #4a5568;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.custom-tooltip .intro {
+  color: #4361ee;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .market-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .index-selector {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+}

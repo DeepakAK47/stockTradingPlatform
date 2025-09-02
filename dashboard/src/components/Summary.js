@@ -3,6 +3,11 @@ import React from "react";
 const Summary = () => {
   return (
     <>
+
+    <div className="alert alert-warning mt-0 mb-3" role="alert">
+⚠️ This is a demo platform with dummy data for the exploring the price of the stokes.
+</div>
+
       <div className="username">
         <h6>Hi, User!</h6>
         <hr className="divider" />
@@ -56,7 +61,13 @@ const Summary = () => {
           </div>
         </div>
         <hr className="divider" />
-      </div>
+
+
+
+
+        </div>
+
+
     </>
   );
 };

@@ -13,14 +13,15 @@ const Menu = () => {
   };
 
   const menuClass = "menu";
-  const activeMenuClass = "menu selected";
+  const activeMenuClass = "menu selected";  
   return (
 <>
 <div className="menu-container" >
     <div className="menus">
-      <img src="logo.png" style={{width:"5%"}}/>
+      <img src="logo.png" className="me-0" style={{width:"3%"}}/>
       <ul>
-        <li>
+
+        <li className="topbarAlignment">
           <Link style={{textDecoration:"none"}} to="/"
           onClick={()=> handleMenuClick(0)}>
           <p className={selectedMenu===0 ? activeMenuClass : menuClass}>
@@ -28,7 +29,9 @@ const Menu = () => {
           </p>
           </Link>
         </li>
-        <li>
+
+
+         <li className="topbarAlignment">
           <Link style={{textDecoration:"none"}} to="/orders"
           onClick={()=> handleMenuClick(1)}>
           <p className={selectedMenu===1 ? activeMenuClass : menuClass}>
@@ -36,7 +39,8 @@ const Menu = () => {
           </p>
           </Link>
         </li>
-        <li>
+
+        <li className="topbarAlignment">
           <Link style={{textDecoration:"none"}} to="/holdings"
           onClick={()=>handleMenuClick(2)}>
           <p className={selectedMenu===2 ? activeMenuClass : menuClass}>
@@ -44,7 +48,8 @@ const Menu = () => {
           </p>
           </Link>
         </li>
-        <li>
+
+         <li className="topbarAlignment">
           <Link style={{textDecoration:"none"}} to="/positions"
           onClick={()=> handleMenuClick(3)}>
           <p className={selectedMenu===3 ? activeMenuClass : menuClass}>
@@ -52,24 +57,28 @@ const Menu = () => {
           </p>
           </Link>
         </li>
-        <li>
+
+         <li className="topbarAlignment">
           <Link style={{textDecoration:"none"}} to="/funds"
           onClick={()=> handleMenuClick(4)}>
           <p className={selectedMenu===4 ? activeMenuClass : menuClass}>Funds</p>
           </Link>
         </li>
-        <li>
+
+         <li className="topbarAlignment">
           <Link style={{textDecoration:"none"}} to="/apps"
           onClick={()=> handleMenuClick(5)}>
           <p className={selectedMenu===5 ? activeMenuClass : menuClass}>Apps</p>
           </Link>
         </li>
       </ul>
-      <hr/>
+
+
       <div className="profile" onClick={handleProfileClick}>
         <div className="avatar">ZU</div>
         <div className="username">USERID</div>
       </div>
+
     </div>
 </div>
 </>
