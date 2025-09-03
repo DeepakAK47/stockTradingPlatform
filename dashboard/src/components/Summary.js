@@ -1,11 +1,11 @@
 import React from "react";
-
+// import MarketChart from "./MarketChart";
 const Summary = () => {
   return (
     <>
 
     <div className="alert alert-warning mt-0 mb-3" role="alert">
-⚠️ This is a demo platform with dummy data for the exploring the price of the stokes.
+⚠️ This is a demo platform with dummy data for the exploring the Zerodha Kite.
 </div>
 
       <div className="username">
@@ -62,7 +62,9 @@ const Summary = () => {
         </div>
         <hr className="divider" />
 
-
+      {/* <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <MarketChart />
+      </div> */}
 
 
         </div>
