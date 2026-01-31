@@ -7,7 +7,7 @@ import { positions } from "../data/data";
 
   const Positions = () => {
 
-// We set the useEffect here so thst we if we change in the mongoDB then that change must also seen here.
+// We set the useEffect here so that if we change in the mongoDB then that change must also seen here.
   const [allPositions, setallPositions] = useState([]);
 
   useEffect(() => {
@@ -58,4 +58,4 @@ import { positions } from "../data/data";
   );
 };
 
-export default Positions;
+export default Positions;  
