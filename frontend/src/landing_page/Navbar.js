@@ -78,11 +78,6 @@ function Navbar() {
                   Support
                 </Link>
               </li>
-              <li>
-                <button className="btn border-0 bg-transparent">
-                  <i className="bi bi-list fs-4"></i>
-                </button>
-              </li>
             </ul>
           </form>
         </div>
