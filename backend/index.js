@@ -10,6 +10,10 @@ const {HoldingsModel} = require("./model/HoldingsModel");
 const {OrdersModel} = require("./model/OrdersModel");
 const {PositionsModel} = require("./model/PositionsModel");
 
+// Import auth routes and middleware
+const authRoutes = require("./routes/auth");
+const { authMiddleware } = require("./middleware/auth");
+
 const PORT = process.env.PORT || 3002
 const uri =  process.env.MONGO_URL; 
 
@@ -19,7 +23,8 @@ mongoose.connect(uri);
 app.use(cors());
 app.use(bodyParser.json());
 
-// Userlogin code
+// Authentication routes
+app.use("/auth", authRoutes);
 
 // We are going to save the holdings data here 
 
