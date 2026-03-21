@@ -89,10 +89,8 @@ function Navbar() {
                 </Link>
               </li>
               {!isAuthenticated && (
-                <li class="nav-item">
-                  <div class="nav-link active">
-                    <Login />
-                  </div>
+                <li class="nav-item ms-3">
+                  <Login />
                 </li>
               )}
               {isAuthenticated && (
