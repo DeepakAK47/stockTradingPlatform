@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import authService from "../services/authService";
 import BuyActionWindow from "./BuyActionWindow";
 
 const GeneralContext = React.createContext({
@@ -27,14 +27,10 @@ export const GeneralContextProvider = (props) => {
       if (token && storedUser) {
         try {
           // Verify token with backend
-          const response = await axios.get("http://localhost:3002/auth/verify", {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          });
+const response = await authService.verifyToken();
 
-          if (response.data.success) {
-            setUser(response.data.user);
+          if (response.success) {
+            setUser(response.user);
             setIsAuthenticated(true);
           } else {
             // Token invalid, clear storage

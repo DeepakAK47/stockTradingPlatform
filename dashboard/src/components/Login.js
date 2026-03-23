@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import authService from "../services/authService";
 import "./Auth.css";
 
 const Login = () => {
@@ -26,23 +26,17 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await axios.post(
-        "http://localhost:3002/auth/login",
-        formData
+      const response = await authService.login(
+        formData.email,
+        formData.password
       );
-
-      if (response.data.success) {
-        // Store token and user data
-        localStorage.setItem("token", response.data.token);
-        localStorage.setItem("user", JSON.stringify(response.data.user));
+      if (response.success) {
         
         // Redirect to dashboard
         navigate("/");
       }
     } catch (err) {
-      setError(
-        err.response?.data?.message || "Login failed. Please try again."
-      );
+      setError(err.message || "Login failed. Please try again.");
     } finally {
       setLoading(false);
     }
