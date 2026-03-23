@@ -18,7 +18,9 @@ const PORT = process.env.PORT || 3002
 const uri =  process.env.MONGO_URL; 
 
 const app =  express();
-mongoose.connect(uri);
+mongoose.connect(uri)
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.log("MongoDB error:", err));
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -254,7 +256,7 @@ res.send("order saved");
 
 
 
-app.listen(3002,()=>{
+app.listen(PORT,()=>{
 console.log("App strated");
 console.log("MongoDB is connected successfully");
 });
