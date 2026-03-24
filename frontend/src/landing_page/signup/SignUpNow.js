@@ -15,6 +15,30 @@ function SignUpNow() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
+  const buildDashboardUrl = (token, user) => {
+    if (!token || !user) {
+      return "http://localhost:3000";
+    }
+
+    let encodedUser = "";
+    try {
+      const userJson = JSON.stringify(user);
+      encodedUser = encodeURIComponent(
+        btoa(unescape(encodeURIComponent(userJson)))
+      );
+    } catch (error) {
+      encodedUser = "";
+    }
+
+    const query = new URLSearchParams();
+    query.set("token", token);
+    if (encodedUser) {
+      query.set("user", encodedUser);
+    }
+
+    return `http://localhost:3000?${query.toString()}`;
+  };
+
   const handleContinue = () => {
     if (email) {
       setFormData({ ...formData, email: email });
@@ -65,10 +89,16 @@ function SignUpNow() {
         setSuccess(true);
         setError("");
         setTimeout(() => {
-          // Store token and redirect to dashboard
+          // Keep frontend auth state and pass auth context to dashboard app.
           localStorage.setItem("token", response.data.token);
           localStorage.setItem("user", JSON.stringify(response.data.user));
-          window.location.href = "http://localhost:3000"; // Redirect to dashboard
+          window.dispatchEvent(new Event("auth:login"));
+
+          const dashboardUrl = buildDashboardUrl(
+            response.data.token,
+            response.data.user
+          );
+          window.location.href = dashboardUrl;
         }, 2000);
       }
     } catch (err) {

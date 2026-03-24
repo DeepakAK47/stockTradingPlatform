@@ -48,6 +48,33 @@ function Navbar() {
     return `http://localhost:3000?${query.toString()}`;
   }, [isAuthenticated]);
 
+  const handleDashboardClick = (event) => {
+    event.preventDefault();
+
+    const token = localStorage.getItem("token");
+    const user = localStorage.getItem("user");
+
+    if (!token || !user) {
+      window.location.href = "http://localhost:3000/login";
+      return;
+    }
+
+    let encodedUser = "";
+    try {
+      encodedUser = encodeURIComponent(btoa(unescape(encodeURIComponent(user))));
+    } catch (error) {
+      encodedUser = "";
+    }
+
+    const query = new URLSearchParams();
+    query.set("token", token);
+    if (encodedUser) {
+      query.set("user", encodedUser);
+    }
+
+    window.location.href = `http://localhost:3000?${query.toString()}`;
+  };
+
   return (
     <nav
       class="navbar navbar-expand-lg border-bottom"
@@ -93,16 +120,15 @@ function Navbar() {
                   <Login />
                 </li>
               )}
-              {isAuthenticated && (
-                <li class="nav-item">
-                  <a
-                    class="nav-link active text-muted custom-link"
-                    href={dashboardUrl}
-                  >
-                    Dashboard
-                  </a>
-                </li>
-              )}
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-muted custom-link"
+                  href={dashboardUrl}
+                  onClick={handleDashboardClick}
+                >
+                  Dashboard
+                </a>
+              </li>
               <li class="nav-item">
                 <Link
                   class="nav-link active text-muted custom-link"

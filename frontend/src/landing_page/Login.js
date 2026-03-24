@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./LoginModal.css";
 
@@ -10,6 +11,30 @@ function Login() {
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const buildDashboardUrl = (token, user) => {
+    if (!token || !user) {
+      return "http://localhost:3000";
+    }
+
+    let encodedUser = "";
+    try {
+      const userJson = JSON.stringify(user);
+      encodedUser = encodeURIComponent(
+        btoa(unescape(encodeURIComponent(userJson)))
+      );
+    } catch (encodeError) {
+      encodedUser = "";
+    }
+
+    const query = new URLSearchParams();
+    query.set("token", token);
+    if (encodedUser) {
+      query.set("user", encodedUser);
+    }
+
+    return `http://localhost:3000?${query.toString()}`;
+  };
 
   const handleOpenModal = () => {
     setShowModal(true);
@@ -48,9 +73,15 @@ function Login() {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", JSON.stringify(response.data.user));
 
-        // Notify navbar and close modal
+        // Notify navbar and redirect to dashboard app.
         window.dispatchEvent(new Event("auth:login"));
         handleCloseModal();
+
+        const dashboardUrl = buildDashboardUrl(
+          response.data.token,
+          response.data.user
+        );
+        window.location.href = dashboardUrl;
       }
     } catch (err) {
       setError(
@@ -117,7 +148,7 @@ function Login() {
             </form>
 
             <p className="modal-footer">
-              Don't have an account? <a href="/signup">Sign up</a>
+              Don't have an account? <Link to="/signup">Sign up</Link>
             </p>
           </div>
         </div>
