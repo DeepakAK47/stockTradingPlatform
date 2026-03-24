@@ -1,10 +1,74 @@
+.dashboard-shell {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+}
+
 .dashboard-header {
   background: #fff;
   padding: 15px 30px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #e9e9e9;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.dashboard-main {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.dashboard-nav {
+  background: #ffffff;
+  border-bottom: 1px solid #ededed;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.dashboard-nav-link {
+  text-decoration: none;
+  color: #4f4f4f;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 14px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.dashboard-nav-link:hover {
+  color: #2067d8;
+  background: #f5f8ff;
+}
+
+.dashboard-nav-link.active {
+  color: #2067d8;
+  border-bottom-color: #2067d8;
+}
+
+.dashboard-main .watchlist-container {
+  flex-basis: 32%;
+  max-width: 360px;
+  min-width: 280px;
+  height: auto;
+  max-height: calc(100vh - 64px);
+}
+
+.dashboard-content {
+  flex: 1;
+  min-width: 0;
+  overflow-y: auto;
+  padding: 24px;
 }
 
 .user-info {
@@ -32,4 +96,51 @@
 
 .logout-btn:hover {
   background: #d32f2f;
+}
+
+@media (max-width: 992px) {
+  .dashboard-nav {
+    padding: 0 14px;
+  }
+
+  .dashboard-main {
+    flex-direction: column;
+  }
+
+  .dashboard-main .watchlist-container {
+    max-width: none;
+    min-width: 0;
+    max-height: 320px;
+  }
+
+  .dashboard-content {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-header {
+    justify-content: center;
+    padding: 12px 14px;
+  }
+
+  .dashboard-nav-link {
+    font-size: 13px;
+    padding: 11px 10px;
+  }
+
+  .user-info {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .user-info span {
+    font-size: 14px;
+  }
+
+  .logout-btn {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
 }

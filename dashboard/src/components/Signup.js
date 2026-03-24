@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import authService from "../services/authService";
+import GeneralContext from "./GeneralContext";
 import "./Auth.css";
 
 const Signup = () => {
@@ -13,6 +15,7 @@ const Signup = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const { login } = useContext(GeneralContext);
 
   const handleChange = (e) => {
     setFormData({
@@ -42,10 +45,7 @@ const Signup = () => {
       );
 
       if (response.success) {
-        // Store token and user data
-        localStorage.setItem("token", response.token);
-        localStorage.setItem("user", JSON.stringify(response.user));
-        
+        login(response.token, response.user);
         // Redirect to dashboard
         navigate("/");
       }

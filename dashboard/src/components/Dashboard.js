@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import GeneralContext from "./GeneralContext";
 import Funds from "./Funds";
 import Orders from "./Orders";
@@ -19,7 +19,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-shell">
       <div className="dashboard-header">
         <div className="user-info">
           <span>Welcome, {user?.username}</span>
@@ -28,15 +28,34 @@ const Dashboard = () => {
           </button>
         </div>
       </div>
-      <WatchList />
-      <div className="content">
-        <Routes>
-          <Route exact path="/" element={<Summary />} />
-          <Route exact path="orders" element={<Orders />} />
-          <Route exact path="holdings" element={<Holdings />} />
-          <Route exact path="positions" element={<Positions />} />
-          <Route exact path="funds" element={<Funds />} />
-        </Routes>
+      <nav className="dashboard-nav" aria-label="Dashboard navigation">
+        <NavLink to="/" end className={({ isActive }) => `dashboard-nav-link${isActive ? " active" : ""}`}>
+          Summary
+        </NavLink>
+        <NavLink to="/orders" className={({ isActive }) => `dashboard-nav-link${isActive ? " active" : ""}`}>
+          Orders
+        </NavLink>
+        <NavLink to="/holdings" className={({ isActive }) => `dashboard-nav-link${isActive ? " active" : ""}`}>
+          Holdings
+        </NavLink>
+        <NavLink to="/positions" className={({ isActive }) => `dashboard-nav-link${isActive ? " active" : ""}`}>
+          Positions
+        </NavLink>
+        <NavLink to="/funds" className={({ isActive }) => `dashboard-nav-link${isActive ? " active" : ""}`}>
+          Funds
+        </NavLink>
+      </nav>
+      <div className="dashboard-main">
+        <WatchList />
+        <div className="dashboard-content">
+          <Routes>
+            <Route exact path="/" element={<Summary />} />
+            <Route exact path="orders" element={<Orders />} />
+            <Route exact path="holdings" element={<Holdings />} />
+            <Route exact path="positions" element={<Positions />} />
+            <Route exact path="funds" element={<Funds />} />
+          </Routes>
+        </div>
       </div>
     </div>
   );

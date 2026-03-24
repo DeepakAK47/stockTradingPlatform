@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import authService from "../services/authService";
+import GeneralContext from "./GeneralContext";
 import "./Auth.css";
 
 const Login = () => {
@@ -11,6 +13,7 @@ const Login = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const { login } = useContext(GeneralContext);
 
   const handleChange = (e) => {
     setFormData({
@@ -31,7 +34,7 @@ const Login = () => {
         formData.password
       );
       if (response.success) {
-        
+        login(response.token, response.user);
         // Redirect to dashboard
         navigate("/");
       }
